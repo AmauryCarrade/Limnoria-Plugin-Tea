@@ -114,9 +114,6 @@ class Tea(callbacks.Plugin):
 
         first_result_link = soup.find(class_='ancragecenter').find('a')
 
-        print(first_result_link)
-        print(first_result_link.get('href'))
-
         root = urlparse(homepage).hostname
         tea_url = 'http://' + root + '/FR/' + first_result_link.get('href')
 
